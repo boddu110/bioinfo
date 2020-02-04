@@ -1,0 +1,11 @@
+*.*
+!*.R
+!*.png
+!*.py
+!*.jpg
+!*.pl
+!*.tif
+!*.sh
+!*.Rmd
+!*.md
+!.gitignore

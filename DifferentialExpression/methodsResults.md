@@ -1,10 +1,4 @@
------
-
-author: Jyothika Boddu output: html\_document: toc: true toc\_depth: 4
-toc\_float: true dev: ‘svg’ md\_document: variant: gfm bibliography:
-bibliography.ris nocite:
-‘(<span class="citeproc-not-found" data-reference-id="*">**???**</span>)’
-— \#\# Differential Expression Analysis
+## Differential Expression Analysis
 
 ## Methods
 
@@ -62,3 +56,25 @@ kable(annot)
 | 14 | path:ko05165 | ko:K04354 |     \-2.068930 | 0.0273593 | Menthol\_Menthol\_vs\_Control | Human papillomavirus infection            |
 
 ## References
+
+<div id="refs" class="references">
+
+<div id="ref-Patro">
+
+Patro, Rob, Geet Duggal, Michael I. Love, Rafael A. Irizarry, and Carl
+Kingsford. 2017. “Salmon Provides Fast and Bias-Aware Quantification of
+Transcript Expression.” *Nature Methods* 14 (4): 417–19.
+<https://doi.org/10.1038/nmeth.4197>.
+
+</div>
+
+<div id="ref-Soneson">
+
+Soneson, Charlotte, Michael I. Love, and Mark D. Robinson. 2015.
+“Differential Analyses for RNA-Seq: Transcript-Level Estimates Improve
+Gene-Level Inferences.” *F1000Research* 4 (December): 1521–1.
+<https://www.ncbi.nlm.nih.gov/pubmed/26925227>.
+
+</div>
+
+</div>

@@ -37,6 +37,7 @@ colnames(ko) <- c("kegg", "ko")
 kable(head(ko))
 # Merge KOs
 blastKo <- merge(blastKegg, ko)
+write.csv(blastKo,"blast.csv",row.names=FALSE)
 # Check the blast ko table
 kable(head(blastKo))
 tx2gene <- unique(subset(blastKo, select=c(trans, ko)))

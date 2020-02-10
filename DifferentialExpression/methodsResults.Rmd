@@ -1,0 +1,39 @@
+---
+
+author: Jyothika Boddu
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    dev: 'svg'
+  md_document:
+    variant: gfm
+bibliography: bibliography.ris
+nocite: '@*'
+---
+## Differential Expression Analysis
+
+## Methods
+
+The two main steps in performing differential expression analysis are to
+estimate the relative abundance of transcripts, and to apply statistical models
+to test for differential expression between treatment groups. Estimating
+relative abundance is basically determining how many NGS reads match a given
+gene within a genome. 
+
+Salmon, a tool for quantifying transcript abundance from RNA-seq reads that is reliable and fast. Salmon is the first transcriptome-wide quantifier to correct bias for fragment GC content. We conducted salmon index and quantity in this module. The index is a framework that salmon use to quasi-map RNA-seq reads during quantification. Salmon conducts its inference using a descriptive and practical RNA-seq data model that takes into account experimental properties and limitations commonly observed in actual RNA-seq results. Next, it includes a collection of target transcripts from de-novo assembly to km length 25 indexes. Last, the data were matched and the salmon quant of the reports became associated with all the samples.
+
+The second method is to use tximport, You will need a table mapping transcripts to genes to use the Salmon data in tximport. This allows translate transcript-level abundance projections from specific quantification pipelines into count-based computational inferencing engines.
+
+The third method is to use DESeq2, here we compose an R script with the contents to import the Salmon alignments into DESeq2 and conduct the study of differential expressions.
+
+## Results
+```{R}
+library(knitr)
+annot<- read.csv("deAnnotated.csv",header=T)
+kable(annot)
+```
+
+
+## References

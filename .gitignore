@@ -5,6 +5,7 @@
 !*.jpg
 !*.pl
 !*.tif
+!*.txt
 !*.sh
 !*.Rmd
 !*.md

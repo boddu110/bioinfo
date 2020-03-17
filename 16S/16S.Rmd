@@ -1,0 +1,31 @@
+---
+author: Jyothika Boddu
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    dev: 'svg'
+  md_document:
+    variant: gfm
+bibliography: bibliography.ris
+---
+## Tutorial Overview
+
+Microbial sequencing involving metagenomics, metatranscriptomics, and amplicon sequencing (e.g. 16S rRNA) of the complete metagenome shotgun has been widespread and rapidly broad in size. QIIME's thedevelopment aims to maintain up with the continuously and increasingly evolving collection of priorities and thereby boost the advancement in the ecology of the submitted microbial culture.Here we use QIIME- (software package for the analysis of 16s data. The two metagenomic samples are fecal microbiota after transplant and soil microbiome (atacama). The first component "Running Images" includes examining human microbiota samples from two persons at four body locations at five time points The procedure is as follows: collecting an hypothetical dataset, sequences of demultiplexing,Series quality control and feature table creation, After completing the quality filtering stage, you may want to explore the resulting data (FeatureTable and FeatureData summaries), create a tree for study of phylogenetic diversity, Alpha and beta diversity, Alpha rarefaction plotting, Taxonomic study, Differential abundance with ANCOM.The second component includes post-fecal microbiota and soil microbiome (atacama), which are performed independently but adopt identical procedure. These are as follows, the first procedure describes the first steps of analysis usually conducted from microbial communities on 16S DNA sequence results. First Technique involves the creation of anexample file.And allocate DNA sequences to the 9 microbial communities included in the report. Following this demultiplex, we will look at the consistency of the series centered on ten thousand randomly selected reads and denote the results. Then we will have objects containing the function table and corresponding function sequences and we will be able to produce summaries and imagine the denoise stats.
+
+## References
+
+<div id="refs" class="references">
+
+<div id="ref-Kuczynski2011">
+
+Kuczynski, Justin, Jesse Stombaugh, William Anton Walters, Antonio
+González, J. Gregory Caporaso, and Rob Knight. 2011. “Using QIIME to
+Analyze 16S rRNA Gene Sequences from Microbial Communities.” *Current
+Protocols in Bioinformatics* Chapter 10 (December): Unit10.7–10.7.
+<https://doi.org/10.1002/0471250953.bi1007s36>.
+
+</div>
+
+</div>

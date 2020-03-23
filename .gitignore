@@ -10,3 +10,7 @@
 !*.Rmd
 !*.md
 !.gitignore
+*.jpg
+*.jpeg
+*.png
+*.gif

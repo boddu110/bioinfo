@@ -11,3 +11,5 @@
 !*.md
 !.gitignore
 !*.pdf
+*.xml
+*.nex

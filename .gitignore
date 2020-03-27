@@ -10,7 +10,6 @@
 !*.Rmd
 !*.md
 !.gitignore
-*
 !*.pdf
-*.xml
-*.nex
+!*.xml
+!*.nex

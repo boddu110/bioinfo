@@ -1,5 +1,5 @@
 ---
-author: Boddu Jyothika (Chuck)
+author: Boddu Jyothika
 output:
   html_document:
     toc: true
@@ -9,6 +9,3 @@ output:
   md_document:
     variant: gfm
 ---
-
-```{R, code=readLines("Metagenomics.R"), echo=TRUE, eval=TRUE, error=TRUE}
-```

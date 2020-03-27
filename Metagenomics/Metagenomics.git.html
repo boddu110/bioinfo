@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="generator" content="pandoc">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style type="text/css">
+@font-face {
+font-family: octicons-link;
+src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+body {
+-webkit-text-size-adjust: 100%;
+text-size-adjust: 100%;
+color: #333;
+font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+font-size: 16px;
+line-height: 1.6;
+word-wrap: break-word;
+}
+a {
+background-color: transparent;
+}
+a:active,
+a:hover {
+outline: 0;
+}
+strong {
+font-weight: bold;
+}
+h1 {
+font-size: 2em;
+margin: 0.67em 0;
+}
+img {
+border: 0;
+}
+hr {
+box-sizing: content-box;
+height: 0;
+}
+pre {
+overflow: auto;
+}
+code,
+kbd,
+pre {
+font-family: monospace, monospace;
+font-size: 1em;
+}
+input {
+color: inherit;
+font: inherit;
+margin: 0;
+}
+html input[disabled] {
+cursor: default;
+}
+input {
+line-height: normal;
+}
+input[type="checkbox"] {
+box-sizing: border-box;
+padding: 0;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+td,
+th {
+padding: 0;
+}
+* {
+box-sizing: border-box;
+}
+input {
+font: 13px / 1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+a {
+color: #4078c0;
+text-decoration: none;
+}
+a:hover,
+a:active {
+text-decoration: underline;
+}
+hr {
+height: 0;
+margin: 15px 0;
+overflow: hidden;
+background: transparent;
+border: 0;
+border-bottom: 1px solid #ddd;
+}
+hr:before {
+display: table;
+content: "";
+}
+hr:after {
+display: table;
+clear: both;
+content: "";
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 15px;
+margin-bottom: 15px;
+line-height: 1.1;
+}
+h1 {
+font-size: 30px;
+}
+h2 {
+font-size: 21px;
+}
+h3 {
+font-size: 16px;
+}
+h4 {
+font-size: 14px;
+}
+h5 {
+font-size: 12px;
+}
+h6 {
+font-size: 11px;
+}
+blockquote {
+margin: 0;
+}
+ul,
+ol {
+padding: 0;
+margin-top: 0;
+margin-bottom: 0;
+}
+ol ol,
+ul ol {
+list-style-type: lower-roman;
+}
+ul ul ol,
+ul ol ol,
+ol ul ol,
+ol ol ol {
+list-style-type: lower-alpha;
+}
+dd {
+margin-left: 0;
+}
+code {
+font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+font-size: 12px;
+}
+pre {
+margin-top: 0;
+margin-bottom: 0;
+font: 12px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+.select::-ms-expand {
+opacity: 0;
+}
+.octicon {
+font: normal normal normal 16px/1 octicons-link;
+display: inline-block;
+text-decoration: none;
+text-rendering: auto;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+-webkit-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+}
+.octicon-link:before {
+content: '\f05c';
+}
+.markdown-body:before {
+display: table;
+content: "";
+}
+.markdown-body:after {
+display: table;
+clear: both;
+content: "";
+}
+.markdown-body>*:first-child {
+margin-top: 0 !important;
+}
+.markdown-body>*:last-child {
+margin-bottom: 0 !important;
+}
+a:not([href]) {
+color: inherit;
+text-decoration: none;
+}
+.anchor {
+display: inline-block;
+padding-right: 2px;
+margin-left: -18px;
+}
+.anchor:focus {
+outline: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+margin-top: 1em;
+margin-bottom: 16px;
+font-weight: bold;
+line-height: 1.4;
+}
+h1 .octicon-link,
+h2 .octicon-link,
+h3 .octicon-link,
+h4 .octicon-link,
+h5 .octicon-link,
+h6 .octicon-link {
+color: #000;
+vertical-align: middle;
+visibility: hidden;
+}
+h1:hover .anchor,
+h2:hover .anchor,
+h3:hover .anchor,
+h4:hover .anchor,
+h5:hover .anchor,
+h6:hover .anchor {
+text-decoration: none;
+}
+h1:hover .anchor .octicon-link,
+h2:hover .anchor .octicon-link,
+h3:hover .anchor .octicon-link,
+h4:hover .anchor .octicon-link,
+h5:hover .anchor .octicon-link,
+h6:hover .anchor .octicon-link {
+visibility: visible;
+}
+h1 {
+padding-bottom: 0.3em;
+font-size: 2.25em;
+line-height: 1.2;
+border-bottom: 1px solid #eee;
+}
+h1 .anchor {
+line-height: 1;
+}
+h2 {
+padding-bottom: 0.3em;
+font-size: 1.75em;
+line-height: 1.225;
+border-bottom: 1px solid #eee;
+}
+h2 .anchor {
+line-height: 1;
+}
+h3 {
+font-size: 1.5em;
+line-height: 1.43;
+}
+h3 .anchor {
+line-height: 1.2;
+}
+h4 {
+font-size: 1.25em;
+}
+h4 .anchor {
+line-height: 1.2;
+}
+h5 {
+font-size: 1em;
+}
+h5 .anchor {
+line-height: 1.1;
+}
+h6 {
+font-size: 1em;
+color: #777;
+}
+h6 .anchor {
+line-height: 1.1;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table,
+pre {
+margin-top: 0;
+margin-bottom: 16px;
+}
+hr {
+height: 4px;
+padding: 0;
+margin: 16px 0;
+background-color: #e7e7e7;
+border: 0 none;
+}
+ul,
+ol {
+padding-left: 2em;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+margin-top: 0;
+margin-bottom: 0;
+}
+li>p {
+margin-top: 16px;
+}
+dl {
+padding: 0;
+}
+dl dt {
+padding: 0;
+margin-top: 16px;
+font-size: 1em;
+font-style: italic;
+font-weight: bold;
+}
+dl dd {
+padding: 0 16px;
+margin-bottom: 16px;
+}
+blockquote {
+padding: 0 15px;
+color: #777;
+border-left: 4px solid #ddd;
+}
+blockquote>:first-child {
+margin-top: 0;
+}
+blockquote>:last-child {
+margin-bottom: 0;
+}
+table {
+display: block;
+width: 100%;
+overflow: auto;
+word-break: normal;
+word-break: keep-all;
+}
+table th {
+font-weight: bold;
+}
+table th,
+table td {
+padding: 6px 13px;
+border: 1px solid #ddd;
+}
+table tr {
+background-color: #fff;
+border-top: 1px solid #ccc;
+}
+table tr:nth-child(2n) {
+background-color: #f8f8f8;
+}
+img {
+max-width: 100%;
+box-sizing: content-box;
+background-color: #fff;
+}
+code {
+padding: 0;
+padding-top: 0.2em;
+padding-bottom: 0.2em;
+margin: 0;
+font-size: 85%;
+background-color: rgba(0,0,0,0.04);
+border-radius: 3px;
+}
+code:before,
+code:after {
+letter-spacing: -0.2em;
+content: "\00a0";
+}
+pre>code {
+padding: 0;
+margin: 0;
+font-size: 100%;
+word-break: normal;
+white-space: pre;
+background: transparent;
+border: 0;
+}
+.highlight {
+margin-bottom: 16px;
+}
+.highlight pre,
+pre {
+padding: 16px;
+overflow: auto;
+font-size: 85%;
+line-height: 1.45;
+background-color: #f7f7f7;
+border-radius: 3px;
+}
+.highlight pre {
+margin-bottom: 0;
+word-break: normal;
+}
+pre {
+word-wrap: normal;
+}
+pre code {
+display: inline;
+max-width: initial;
+padding: 0;
+margin: 0;
+overflow: initial;
+line-height: inherit;
+word-wrap: normal;
+background-color: transparent;
+border: 0;
+}
+pre code:before,
+pre code:after {
+content: normal;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font-size: 11px;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.pl-c {
+color: #969896;
+}
+.pl-c1,
+.pl-s .pl-v {
+color: #0086b3;
+}
+.pl-e,
+.pl-en {
+color: #795da3;
+}
+.pl-s .pl-s1,
+.pl-smi {
+color: #333;
+}
+.pl-ent {
+color: #63a35c;
+}
+.pl-k {
+color: #a71d5d;
+}
+.pl-pds,
+.pl-s,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sra,
+.pl-sr .pl-sre {
+color: #183691;
+}
+.pl-v {
+color: #ed6a43;
+}
+.pl-id {
+color: #b52a1d;
+}
+.pl-ii {
+background-color: #b52a1d;
+color: #f8f8f8;
+}
+.pl-sr .pl-cce {
+color: #63a35c;
+font-weight: bold;
+}
+.pl-ml {
+color: #693a17;
+}
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+color: #1d3e81;
+font-weight: bold;
+}
+.pl-mq {
+color: #008080;
+}
+.pl-mi {
+color: #333;
+font-style: italic;
+}
+.pl-mb {
+color: #333;
+font-weight: bold;
+}
+.pl-md {
+background-color: #ffecec;
+color: #bd2c00;
+}
+.pl-mi1 {
+background-color: #eaffea;
+color: #55a532;
+}
+.pl-mdr {
+color: #795da3;
+font-weight: bold;
+}
+.pl-mo {
+color: #1d3e81;
+}
+kbd {
+display: inline-block;
+padding: 3px 5px;
+font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+line-height: 10px;
+color: #555;
+vertical-align: middle;
+background-color: #fcfcfc;
+border: solid 1px #ccc;
+border-bottom-color: #bbb;
+border-radius: 3px;
+box-shadow: inset 0 -1px 0 #bbb;
+}
+.task-list-item {
+list-style-type: none;
+}
+.task-list-item+.task-list-item {
+margin-top: 3px;
+}
+.task-list-item input {
+margin: 0 0.35em 0.25em -1.6em;
+vertical-align: middle;
+}
+:checked+.radio-label {
+z-index: 1;
+position: relative;
+border-color: #4078c0;
+}
+.sourceLine {
+display: inline-block;
+}
+code .kw { color: #000000; }
+code .dt { color: #ed6a43; }
+code .dv { color: #009999; }
+code .bn { color: #009999; }
+code .fl { color: #009999; }
+code .ch { color: #009999; }
+code .st { color: #183691; }
+code .co { color: #969896; }
+code .ot { color: #0086b3; }
+code .al { color: #a61717; }
+code .fu { color: #63a35c; }
+code .er { color: #a61717; background-color: #e3d2d2; }
+code .wa { color: #000000; }
+code .cn { color: #008080; }
+code .sc { color: #008080; }
+code .vs { color: #183691; }
+code .ss { color: #183691; }
+code .im { color: #000000; }
+code .va {color: #008080; }
+code .cf { color: #000000; }
+code .op { color: #000000; }
+code .bu { color: #000000; }
+code .ex { color: #000000; }
+code .pp { color: #999999; }
+code .at { color: #008080; }
+code .do { color: #969896; }
+code .an { color: #008080; }
+code .cv { color: #008080; }
+code .in { color: #008080; }
+</style>
+<style>
+body {
+  box-sizing: border-box;
+  min-width: 200px;
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 45px;
+  padding-top: 0px;
+}
+</style>
+
+</head>
+
+<body data-gr-c-s-loaded="true">
+
+<h1 id="lung-metagenomic-analysis">Lung Metagenomic Analysis</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" title="1">knitr<span class="op">::</span>opts_chunk<span class="op">$</span><span class="kw">set</span>(<span class="dt">echo=</span><span class="ot">TRUE</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" title="1"><span class="kw">library</span>(metagenomeSeq)</a></code></pre></div>
+<pre><code>## Warning: package 'metagenomeSeq' was built under R version 3.6.2
+
+## Loading required package: Biobase
+
+## Loading required package: BiocGenerics
+
+## Loading required package: parallel
+
+## 
+## Attaching package: 'BiocGenerics'
+
+## The following objects are masked from 'package:parallel':
+## 
+##     clusterApply, clusterApplyLB, clusterCall, clusterEvalQ,
+##     clusterExport, clusterMap, parApply, parCapply, parLapply,
+##     parLapplyLB, parRapply, parSapply, parSapplyLB
+
+## The following objects are masked from 'package:stats':
+## 
+##     IQR, mad, sd, var, xtabs
+
+## The following objects are masked from 'package:base':
+## 
+##     anyDuplicated, append, as.data.frame, basename, cbind, colnames,
+##     dirname, do.call, duplicated, eval, evalq, Filter, Find, get, grep,
+##     grepl, intersect, is.unsorted, lapply, Map, mapply, match, mget,
+##     order, paste, pmax, pmax.int, pmin, pmin.int, Position, rank,
+##     rbind, Reduce, rownames, sapply, setdiff, sort, table, tapply,
+##     union, unique, unsplit, which, which.max, which.min
+
+## Welcome to Bioconductor
+## 
+##     Vignettes contain introductory material; view with
+##     'browseVignettes()'. To cite Bioconductor, see
+##     'citation("Biobase")', and for packages 'citation("pkgname")'.
+
+## Loading required package: limma
+
+## 
+## Attaching package: 'limma'
+
+## The following object is masked from 'package:BiocGenerics':
+## 
+##     plotMA
+
+## Loading required package: glmnet
+
+## Warning: package 'glmnet' was built under R version 3.6.3
+
+## Loading required package: Matrix
+
+## Loaded glmnet 3.0-2
+
+## Loading required package: RColorBrewer
+</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" title="1"><span class="kw">library</span>(biomformat)</a></code></pre></div>
+<p>Reading a biom file</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb5-1" title="1">biom_file &lt;-<span class="kw">system.file</span>(<span class="st">"extdata"</span>, <span class="st">"min_sparse_otu_table.biom"</span>,<span class="dt">package =</span> <span class="st">"biomformat"</span>)</a>
+<a class="sourceLine" id="cb5-2" title="2">b &lt;-<span class="kw">read_biom</span>(biom_file)</a>
+<a class="sourceLine" id="cb5-3" title="3"><span class="kw">biom2MRexperiment</span>(b)</a></code></pre></div>
+<pre><code>## MRexperiment (storageMode: environment)
+## assayData: 5 features, 6 samples 
+##   element names: counts 
+## protocolData: none
+## phenoData: none
+## featureData: none
+## experimentData: use 'experimentData(object)'
+## Annotation:
+</code></pre>
+<p>loading count data</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb7-1" title="1">dataDirectory &lt;-<span class="kw">system.file</span>(<span class="st">"extdata"</span>, <span class="dt">package =</span> <span class="st">"metagenomeSeq"</span>)</a>
+<a class="sourceLine" id="cb7-2" title="2">lung =<span class="kw">loadMeta</span>(<span class="kw">file.path</span>(dataDirectory, <span class="st">"CHK_NAME.otus.count.csv"</span>))</a>
+<a class="sourceLine" id="cb7-3" title="3"><span class="kw">dim</span>(lung<span class="op">$</span>counts)</a></code></pre></div>
+<pre><code>## [1] 1000   78
+</code></pre>
+<p>loading taxanomy</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb9-1" title="1">taxa =<span class="kw">read.delim</span>(<span class="kw">file.path</span>(dataDirectory, <span class="st">"CHK_otus.taxonomy.csv"</span>),<span class="dt">stringsAsFactors =</span> <span class="ot">FALSE</span>)</a></code></pre></div>
+<p>loading metadata</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb10-1" title="1">clin =<span class="kw">loadPhenoData</span>(<span class="kw">file.path</span>(dataDirectory, <span class="st">"CHK_clinical.csv"</span>),<span class="dt">tran =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb10-2" title="2">ord =<span class="kw">match</span>(<span class="kw">colnames</span>(lung<span class="op">$</span>counts),<span class="kw">rownames</span>(clin))</a>
+<a class="sourceLine" id="cb10-3" title="3">clin =<span class="st"> </span>clin[ord, ]</a>
+<a class="sourceLine" id="cb10-4" title="4"><span class="kw">head</span>(clin[<span class="dv">1</span><span class="op">:</span><span class="dv">2</span>, ])</a></code></pre></div>
+<pre><code>##                                          SampleType          SiteSampled
+## CHK_6467_E3B11_BRONCH2_PREWASH_V1V2 Bronch2.PreWash Bronchoscope.Channel
+## CHK_6467_E3B11_OW_V1V2                           OW           OralCavity
+##                                     SmokingStatus
+## CHK_6467_E3B11_BRONCH2_PREWASH_V1V2        Smoker
+## CHK_6467_E3B11_OW_V1V2                     Smoker
+</code></pre>
+<p>creating MRexperiment object</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb12-1" title="1">phenotypeData =<span class="kw">AnnotatedDataFrame</span>(clin)</a>
+<a class="sourceLine" id="cb12-2" title="2">phenotypeData</a></code></pre></div>
+<pre><code>## An object of class 'AnnotatedDataFrame'
+##   rowNames: CHK_6467_E3B11_BRONCH2_PREWASH_V1V2 CHK_6467_E3B11_OW_V1V2
+##     ... CHK_6467_E3B09_BAL_A_V1V2 (78 total)
+##   varLabels: SampleType SiteSampled SmokingStatus
+##   varMetadata: labelDescription
+</code></pre>
+<div class="sourceCode" id="cb14"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb14-1" title="1">OTUdata =<span class="kw">AnnotatedDataFrame</span>(taxa)</a>
+<a class="sourceLine" id="cb14-2" title="2">OTUdata</a></code></pre></div>
+<pre><code>## An object of class 'AnnotatedDataFrame'
+##   rowNames: 1 2 ... 1000 (1000 total)
+##   varLabels: OTU Taxonomy ... strain (10 total)
+##   varMetadata: labelDescription
+</code></pre>
+<div class="sourceCode" id="cb16"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb16-1" title="1">obj =<span class="kw">newMRexperiment</span>(lung<span class="op">$</span>counts,<span class="dt">phenoData=</span>phenotypeData,<span class="dt">featureData=</span>OTUdata)</a>
+<a class="sourceLine" id="cb16-2" title="2">obj</a></code></pre></div>
+<pre><code>## MRexperiment (storageMode: environment)
+## assayData: 1000 features, 78 samples 
+##   element names: counts 
+## protocolData: none
+## phenoData
+##   sampleNames: CHK_6467_E3B11_BRONCH2_PREWASH_V1V2
+##     CHK_6467_E3B11_OW_V1V2 ... CHK_6467_E3B09_BAL_A_V1V2 (78 total)
+##   varLabels: SampleType SiteSampled SmokingStatus
+##   varMetadata: labelDescription
+## featureData
+##   featureNames: 1 2 ... 1000 (1000 total)
+##   fvarLabels: OTU Taxonomy ... strain (10 total)
+##   fvarMetadata: labelDescription
+## experimentData: use 'experimentData(object)'
+## Annotation:
+</code></pre>
+<p>lung data</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb18-1" title="1"><span class="kw">data</span>(lungData)</a>
+<a class="sourceLine" id="cb18-2" title="2">lungData</a></code></pre></div>
+<pre><code>## MRexperiment (storageMode: environment)
+## assayData: 51891 features, 78 samples 
+##   element names: counts 
+## protocolData: none
+## phenoData
+##   sampleNames: CHK_6467_E3B11_BRONCH2_PREWASH_V1V2
+##     CHK_6467_E3B11_OW_V1V2 ... CHK_6467_E3B09_BAL_A_V1V2 (78 total)
+##   varLabels: SampleType SiteSampled SmokingStatus
+##   varMetadata: labelDescription
+## featureData
+##   featureNames: 1 2 ... 51891 (51891 total)
+##   fvarLabels: taxa
+##   fvarMetadata: labelDescription
+## experimentData: use 'experimentData(object)'
+## Annotation:
+</code></pre>
+<div class="sourceCode" id="cb20"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb20-1" title="1"><span class="kw">phenoData</span>(obj)</a></code></pre></div>
+<pre><code>## An object of class 'AnnotatedDataFrame'
+##   sampleNames: CHK_6467_E3B11_BRONCH2_PREWASH_V1V2
+##     CHK_6467_E3B11_OW_V1V2 ... CHK_6467_E3B09_BAL_A_V1V2 (78 total)
+##   varLabels: SampleType SiteSampled SmokingStatus
+##   varMetadata: labelDescription
+</code></pre>
+<div class="sourceCode" id="cb22"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb22-1" title="1"><span class="kw">head</span>(<span class="kw">pData</span>(obj), <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>##                                          SampleType          SiteSampled
+## CHK_6467_E3B11_BRONCH2_PREWASH_V1V2 Bronch2.PreWash Bronchoscope.Channel
+## CHK_6467_E3B11_OW_V1V2                           OW           OralCavity
+## CHK_6467_E3B08_OW_V1V2                           OW           OralCavity
+##                                     SmokingStatus
+## CHK_6467_E3B11_BRONCH2_PREWASH_V1V2        Smoker
+## CHK_6467_E3B11_OW_V1V2                     Smoker
+## CHK_6467_E3B08_OW_V1V2                  NonSmoker
+</code></pre>
+<p>to acess feature information</p>
+<div class="sourceCode" id="cb24"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb24-1" title="1"><span class="kw">featureData</span>(obj)</a></code></pre></div>
+<pre><code>## An object of class 'AnnotatedDataFrame'
+##   featureNames: 1 2 ... 1000 (1000 total)
+##   varLabels: OTU Taxonomy ... strain (10 total)
+##   varMetadata: labelDescription
+</code></pre>
+<div class="sourceCode" id="cb26"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb26-1" title="1"><span class="kw">head</span>(<span class="kw">fData</span>(obj)[, <span class="op">-</span><span class="kw">c</span>(<span class="dv">2</span>, <span class="dv">10</span>)], <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>##   OTU superkingdom         phylum                  class             order
+## 1   1     Bacteria Proteobacteria  Epsilonproteobacteria Campylobacterales
+## 2   2         &lt;NA&gt;           &lt;NA&gt;                   &lt;NA&gt;              &lt;NA&gt;
+## 3   3     Bacteria Actinobacteria Actinobacteria (class)   Actinomycetales
+##               family         genus                  species
+## 1 Campylobacteraceae Campylobacter     Campylobacter rectus
+## 2               &lt;NA&gt;          &lt;NA&gt;                     &lt;NA&gt;
+## 3   Actinomycetaceae   Actinomyces Actinomyces radicidentis
+</code></pre>
+<p>to acess normalized counts matrix with MR counts function</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb28-1" title="1"><span class="kw">head</span>(<span class="kw">MRcounts</span>(obj[, <span class="dv">1</span><span class="op">:</span><span class="dv">2</span>]))</a></code></pre></div>
+<pre><code>##   CHK_6467_E3B11_BRONCH2_PREWASH_V1V2 CHK_6467_E3B11_OW_V1V2
+## 1                                   0                      0
+## 2                                   0                      0
+## 3                                   0                      0
+## 4                                   0                      0
+## 5                                   0                      0
+## 6                                   0                      0
+</code></pre>
+<p>subsetting MRexperiment class object</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb30-1" title="1">featuresToKeep =<span class="kw">which</span>(<span class="kw">rowSums</span>(obj) <span class="op">&gt;=</span><span class="st"> </span><span class="dv">100</span>)</a>
+<a class="sourceLine" id="cb30-2" title="2">samplesToKeep =<span class="kw">which</span>(<span class="kw">pData</span>(obj)<span class="op">$</span>SmokingStatus <span class="op">==</span><span class="st"> "Smoker"</span>)</a>
+<a class="sourceLine" id="cb30-3" title="3">obj_smokers =<span class="st"> </span>obj[featuresToKeep, samplesToKeep]</a>
+<a class="sourceLine" id="cb30-4" title="4">obj_smokers</a></code></pre></div>
+<pre><code>## MRexperiment (storageMode: environment)
+## assayData: 1 features, 33 samples 
+##   element names: counts 
+## protocolData: none
+## phenoData
+##   sampleNames: CHK_6467_E3B11_BRONCH2_PREWASH_V1V2
+##     CHK_6467_E3B11_OW_V1V2 ... CHK_6467_E3B09_BAL_A_V1V2 (33 total)
+##   varLabels: SampleType SiteSampled SmokingStatus
+##   varMetadata: labelDescription
+## featureData
+##   featureNames: 570
+##   fvarLabels: OTU Taxonomy ... strain (10 total)
+##   fvarMetadata: labelDescription
+## experimentData: use 'experimentData(object)'
+## Annotation:
+</code></pre>
+<div class="sourceCode" id="cb32"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb32-1" title="1"><span class="kw">head</span>(<span class="kw">pData</span>(obj_smokers), <span class="dv">3</span>)</a></code></pre></div>
+<pre><code>##                                          SampleType          SiteSampled
+## CHK_6467_E3B11_BRONCH2_PREWASH_V1V2 Bronch2.PreWash Bronchoscope.Channel
+## CHK_6467_E3B11_OW_V1V2                           OW           OralCavity
+## CHK_6467_E3B11_BAL_A_V1V2                     BAL.A                 Lung
+##                                     SmokingStatus
+## CHK_6467_E3B11_BRONCH2_PREWASH_V1V2        Smoker
+## CHK_6467_E3B11_OW_V1V2                     Smoker
+## CHK_6467_E3B11_BAL_A_V1V2                  Smoker
+</code></pre>
+<p>Alternative method using normFactors</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb34-1" title="1"><span class="kw">head</span>(<span class="kw">normFactors</span>(obj))</a></code></pre></div>
+<pre><code>##                                     [,1]
+## CHK_6467_E3B11_BRONCH2_PREWASH_V1V2   NA
+## CHK_6467_E3B11_OW_V1V2                NA
+## CHK_6467_E3B08_OW_V1V2                NA
+## CHK_6467_E3B07_BAL_A_V1V2             NA
+## CHK_6467_E3B11_BAL_A_V1V2             NA
+## CHK_6467_E3B09_OP_V1V2                NA
+</code></pre>
+<div class="sourceCode" id="cb36"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb36-1" title="1"><span class="kw">normFactors</span>(obj) &lt;-<span class="kw">rnorm</span>(<span class="kw">ncol</span>(obj))</a>
+<a class="sourceLine" id="cb36-2" title="2"><span class="kw">head</span>(<span class="kw">normFactors</span>(obj))</a></code></pre></div>
+<pre><code>## CHK_6467_E3B11_BRONCH2_PREWASH_V1V2              CHK_6467_E3B11_OW_V1V2 
+##                         -0.15037561                         -0.71879335 
+##              CHK_6467_E3B08_OW_V1V2           CHK_6467_E3B07_BAL_A_V1V2 
+##                          1.10809268                          0.03293243 
+##           CHK_6467_E3B11_BAL_A_V1V2              CHK_6467_E3B09_OP_V1V2 
+##                          0.16796215                          0.25891871
+</code></pre>
+<p>libsizemethods</p>
+<div class="sourceCode" id="cb38"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb38-1" title="1"><span class="kw">head</span>(<span class="kw">libSize</span>(obj))</a></code></pre></div>
+<pre><code>##                                     [,1]
+## CHK_6467_E3B11_BRONCH2_PREWASH_V1V2    0
+## CHK_6467_E3B11_OW_V1V2                16
+## CHK_6467_E3B08_OW_V1V2                 1
+## CHK_6467_E3B07_BAL_A_V1V2              2
+## CHK_6467_E3B11_BAL_A_V1V2            118
+## CHK_6467_E3B09_OP_V1V2                 5
+</code></pre>
+<div class="sourceCode" id="cb40"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb40-1" title="1"><span class="kw">libSize</span>(obj) &lt;-<span class="kw">rnorm</span>(<span class="kw">ncol</span>(obj))</a>
+<a class="sourceLine" id="cb40-2" title="2"><span class="kw">head</span>(<span class="kw">libSize</span>(obj))</a></code></pre></div>
+<pre><code>## CHK_6467_E3B11_BRONCH2_PREWASH_V1V2              CHK_6467_E3B11_OW_V1V2 
+##                          -1.1357136                           0.1400379 
+##              CHK_6467_E3B08_OW_V1V2           CHK_6467_E3B07_BAL_A_V1V2 
+##                           1.7368518                          -0.9135963 
+##           CHK_6467_E3B11_BAL_A_V1V2              CHK_6467_E3B09_OP_V1V2 
+##                           1.1483513                          -0.1405815
+</code></pre>
+<p>calculate normalization factors</p>
+<div class="sourceCode" id="cb42"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb42-1" title="1"><span class="kw">data</span>(lungData)</a>
+<a class="sourceLine" id="cb42-2" title="2">p =<span class="kw">cumNormStatFast</span>(lungData)</a>
+<a class="sourceLine" id="cb42-3" title="3">lungData =<span class="kw">cumNorm</span>(lungData, <span class="dt">p =</span> p)</a></code></pre></div>
+<p>exportingdata</p>
+<div class="sourceCode" id="cb43"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb43-1" title="1">mat =<span class="kw">MRcounts</span>(lungData, <span class="dt">norm =</span> <span class="ot">TRUE</span>, <span class="dt">log =</span> <span class="ot">TRUE</span>)[<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>]</a>
+<a class="sourceLine" id="cb43-2" title="2"><span class="kw">exportMat</span>(mat, <span class="dt">file =</span><span class="kw">file.path</span>(dataDirectory, <span class="st">"tmp.tsv"</span>))</a>
+<a class="sourceLine" id="cb43-3" title="3"></a>
+<a class="sourceLine" id="cb43-4" title="4"><span class="kw">exportStats</span>(lungData[, <span class="dv">1</span><span class="op">:</span><span class="dv">5</span>], <span class="dt">file =</span><span class="kw">file.path</span>(dataDirectory,<span class="st">"tmp.tsv"</span>))</a></code></pre></div>
+<pre><code>## Default value being used.
+</code></pre>
+<div class="sourceCode" id="cb45"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb45-1" title="1"><span class="kw">head</span>(<span class="kw">read.csv</span>(<span class="dt">file =</span><span class="kw">file.path</span>(dataDirectory, <span class="st">"tmp.tsv"</span>), <span class="dt">sep =</span> <span class="st">"</span><span class="ch">\t</span><span class="st">"</span>))</a></code></pre></div>
+<pre><code>##                               Subject Scaling.factor Quantile.value
+## 1 CHK_6467_E3B11_BRONCH2_PREWASH_V1V2             67              2
+## 2              CHK_6467_E3B11_OW_V1V2           2475              1
+## 3              CHK_6467_E3B08_OW_V1V2           2198              1
+## 4           CHK_6467_E3B07_BAL_A_V1V2            836              1
+## 5           CHK_6467_E3B11_BAL_A_V1V2           1008              1
+##   Number.of.identified.features Library.size
+## 1                            60          271
+## 2                          3299         7863
+## 3                          2994         8360
+## 4                          1188         5249
+## 5                          1098         3383
+</code></pre>
+<p>using featurefit model for differential abundance testing</p>
+<div class="sourceCode" id="cb47"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb47-1" title="1"><span class="kw">data</span>(lungData)</a>
+<a class="sourceLine" id="cb47-2" title="2">lungData =<span class="st"> </span>lungData[, <span class="op">-</span><span class="kw">which</span>(<span class="kw">is.na</span>(<span class="kw">pData</span>(lungData)<span class="op">$</span>SmokingStatus))]</a>
+<a class="sourceLine" id="cb47-3" title="3">lungData =<span class="kw">filterData</span>(lungData, <span class="dt">present =</span> <span class="dv">30</span>, <span class="dt">depth =</span> <span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb47-4" title="4">lungData &lt;-<span class="kw">cumNorm</span>(lungData, <span class="dt">p =</span> <span class="fl">0.5</span>)</a>
+<a class="sourceLine" id="cb47-5" title="5">pd &lt;-<span class="kw">pData</span>(lungData)</a>
+<a class="sourceLine" id="cb47-6" title="6">mod &lt;-<span class="kw">model.matrix</span>( <span class="op">~</span><span class="dv">1</span> <span class="op">+</span><span class="st"> </span>SmokingStatus, <span class="dt">data =</span> pd)</a>
+<a class="sourceLine" id="cb47-7" title="7">lungres1 =<span class="kw">fitFeatureModel</span>(lungData, mod)</a>
+<a class="sourceLine" id="cb47-8" title="8"><span class="kw">head</span>(<span class="kw">MRcoefs</span>(lungres1))</a></code></pre></div>
+<pre><code>##           logFC        se      pvalues   adjPvalues
+## 3465  -4.824949 0.5697511 0.000000e+00 0.000000e+00
+## 35827 -4.304266 0.5445548 2.664535e-15 1.079137e-13
+## 2817   2.320656 0.4324661 8.045793e-08 1.629273e-06
+## 2735   2.260203 0.4331098 1.803341e-07 2.921412e-06
+## 5411   1.748296 0.3092461 1.572921e-08 4.246888e-07
+## 48745 -1.645805 0.3293117 5.801451e-07 7.831959e-06
+</code></pre>
+<p>using fitZig</p>
+<div class="sourceCode" id="cb49"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb49-1" title="1"><span class="kw">data</span>(lungData)</a>
+<a class="sourceLine" id="cb49-2" title="2">controls =<span class="kw">grep</span>(<span class="st">"Extraction.Control"</span>,<span class="kw">pData</span>(lungData)<span class="op">$</span>SampleType)</a>
+<a class="sourceLine" id="cb49-3" title="3">lungTrim =<span class="st"> </span>lungData[, <span class="op">-</span>controls]</a>
+<a class="sourceLine" id="cb49-4" title="4">rareFeatures =<span class="kw">which</span>(<span class="kw">rowSums</span>(<span class="kw">MRcounts</span>(lungTrim) <span class="op">&gt;</span><span class="st"> </span><span class="dv">0</span>) <span class="op">&lt;</span><span class="st"> </span><span class="dv">10</span>)</a>
+<a class="sourceLine" id="cb49-5" title="5">lungTrim =<span class="st"> </span>lungTrim[<span class="op">-</span>rareFeatures, ]</a>
+<a class="sourceLine" id="cb49-6" title="6">lungp =<span class="kw">cumNormStat</span>(lungTrim, <span class="dt">pFlag =</span> <span class="ot">TRUE</span>, <span class="dt">main =</span> <span class="st">"Trimmed lung data"</span>)</a></code></pre></div>
+<pre><code>## Default value being used.
+</code></pre>
+<p><img src="data:image/png;base64,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"><!-- --></p>
+<div class="sourceCode" id="cb51"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb51-1" title="1">lungTrim =<span class="kw">cumNorm</span>(lungTrim, <span class="dt">p =</span> lungp)</a>
+<a class="sourceLine" id="cb51-2" title="2"></a>
+<a class="sourceLine" id="cb51-3" title="3">smokingStatus =<span class="kw">pData</span>(lungTrim)<span class="op">$</span>SmokingStatus</a>
+<a class="sourceLine" id="cb51-4" title="4">bodySite =<span class="kw">pData</span>(lungTrim)<span class="op">$</span>SampleType</a>
+<a class="sourceLine" id="cb51-5" title="5">normFactor =<span class="kw">normFactors</span>(lungTrim)</a>
+<a class="sourceLine" id="cb51-6" title="6">normFactor =<span class="kw">log2</span>(normFactor<span class="op">/</span><span class="kw">median</span>(normFactor) <span class="op">+</span><span class="st"> </span><span class="dv">1</span>)</a>
+<a class="sourceLine" id="cb51-7" title="7">mod =<span class="kw">model.matrix</span>( <span class="op">~</span>smokingStatus <span class="op">+</span><span class="st"> </span>bodySite <span class="op">+</span><span class="st"> </span>normFactor)</a>
+<a class="sourceLine" id="cb51-8" title="8">settings =<span class="kw">zigControl</span>(<span class="dt">maxit =</span> <span class="dv">10</span>, <span class="dt">verbose =</span> <span class="ot">TRUE</span>)</a>
+<a class="sourceLine" id="cb51-9" title="9">fit =<span class="kw">fitZig</span>(<span class="dt">obj =</span> lungTrim, <span class="dt">mod =</span> mod, <span class="dt">useCSSoffset =</span> <span class="ot">FALSE</span>,<span class="dt">control =</span> settings)</a></code></pre></div>
+<pre><code>## it= 0, nll=88.42, log10(eps+1)=Inf, stillActive=1029
+## it= 1, nll=93.56, log10(eps+1)=0.06, stillActive=261
+## it= 2, nll=93.46, log10(eps+1)=0.05, stillActive=120
+## it= 3, nll=93.80, log10(eps+1)=0.05, stillActive=22
+## it= 4, nll=93.94, log10(eps+1)=0.03, stillActive=3
+## it= 5, nll=93.93, log10(eps+1)=0.00, stillActive=1
+## it= 6, nll=93.90, log10(eps+1)=0.00, stillActive=1
+## it= 7, nll=93.87, log10(eps+1)=0.00, stillActive=1
+## it= 8, nll=93.86, log10(eps+1)=0.00, stillActive=1
+## it= 9, nll=93.85, log10(eps+1)=0.00, stillActive=1
+</code></pre>
+<p>maxit=1 is for demonstration purposes</p>
+<div class="sourceCode" id="cb53"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb53-1" title="1">settings =<span class="kw">zigControl</span>(<span class="dt">maxit =</span> <span class="dv">1</span>, <span class="dt">verbose =</span> <span class="ot">FALSE</span>)</a>
+<a class="sourceLine" id="cb53-2" title="2">mod =<span class="kw">model.matrix</span>(<span class="op">~</span>bodySite)</a>
+<a class="sourceLine" id="cb53-3" title="3"><span class="kw">colnames</span>(mod) =<span class="kw">levels</span>(bodySite)</a></code></pre></div>
+<p>fitting the ZIG model</p>
+<div class="sourceCode" id="cb54"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb54-1" title="1">res =<span class="kw">fitZig</span>(<span class="dt">obj =</span> lungTrim, <span class="dt">mod =</span> mod, <span class="dt">control =</span> settings)</a>
+<a class="sourceLine" id="cb54-2" title="2">zigFit =<span class="kw">slot</span>(res, <span class="st">"fit"</span>)</a>
+<a class="sourceLine" id="cb54-3" title="3">finalMod =<span class="kw">slot</span>(res, <span class="st">"fit"</span>)<span class="op">$</span>design</a>
+<a class="sourceLine" id="cb54-4" title="4">contrast.matrix =<span class="kw">makeContrasts</span>(BAL.A <span class="op">-</span><span class="st"> </span>BAL.B, OW <span class="op">-</span><span class="st"> </span>PSB, <span class="dt">levels =</span> finalMod)</a>
+<a class="sourceLine" id="cb54-5" title="5">fit2 =<span class="kw">contrasts.fit</span>(zigFit, contrast.matrix)</a>
+<a class="sourceLine" id="cb54-6" title="6">fit2 =<span class="kw">eBayes</span>(fit2)</a>
+<a class="sourceLine" id="cb54-7" title="7"><span class="kw">topTable</span>(fit2)</a></code></pre></div>
+<pre><code>##       BAL.A...BAL.B  OW...PSB   AveExpr         F      P.Value  adj.P.Val
+## 18531    0.37318792  2.075648 0.7343081 12.715105 5.359780e-05 0.02813711
+## 6291    -0.10695735  1.658829 0.4671470 12.956898 5.482439e-05 0.02813711
+## 37977   -0.37995461  2.174071 0.4526060 12.528733 8.203239e-05 0.02813711
+## 6901     0.17344138  1.466113 0.2435881 12.018652 1.335806e-04 0.03212047
+## 40291    0.06892926  1.700238 0.2195735 11.803380 1.560761e-04 0.03212047
+## 36117   -0.28665883  2.233996 0.4084024 10.571931 3.012092e-04 0.05013569
+## 7343    -0.22859078  1.559465 0.3116465 10.090602 3.931844e-04 0.05013569
+## 7342     0.59882970  1.902346 0.5334647  9.410984 4.901651e-04 0.05013569
+## 1727     1.09837459 -2.160466 0.7780167  9.346013 5.027597e-04 0.05013569
+## 40329   -0.07145998  1.481582 0.2475735  9.700136 5.259032e-04 0.05013569
+</code></pre>
+<p>exporting fits</p>
+<div class="sourceCode" id="cb56"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb56-1" title="1">taxa =<span class="kw">sapply</span>(<span class="kw">strsplit</span>(<span class="kw">as.character</span>(<span class="kw">fData</span>(lungTrim)<span class="op">$</span>taxa), <span class="dt">split =</span> <span class="st">";"</span>),<span class="cf">function</span>(i){i[<span class="kw">length</span>(i)]})</a>
+<a class="sourceLine" id="cb56-2" title="2"><span class="kw">head</span>(<span class="kw">MRcoefs</span>(fit, <span class="dt">taxa =</span> taxa, <span class="dt">coef =</span> <span class="dv">2</span>))</a></code></pre></div>
+<pre><code>##                                   smokingStatusSmoker      pvalues   adjPvalues
+## Neisseria polysaccharea                     -4.031612 3.927097e-11 2.959194e-08
+## Neisseria meningitidis                      -3.958899 5.751592e-11 2.959194e-08
+## Prevotella intermedia                       -2.927686 4.339587e-09 8.930871e-07
+## Porphyromonas sp. UQD 414                   -2.675306 1.788697e-07 1.357269e-05
+## Prevotella paludivivens                      2.575672 1.360718e-07 1.272890e-05
+## Leptotrichia sp. oral clone FP036            2.574172 3.544957e-04 1.414122e-03
+</code></pre>
+<p>log normal permutation test</p>
+<div class="sourceCode" id="cb58"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb58-1" title="1">coeffOfInterest =<span class="st"> </span><span class="dv">2</span></a>
+<a class="sourceLine" id="cb58-2" title="2">res =<span class="kw">fitLogNormal</span>(<span class="dt">obj =</span> lungTrim, <span class="dt">mod =</span> mod, <span class="dt">useCSSoffset =</span> <span class="ot">FALSE</span>,<span class="dt">B =</span> <span class="dv">10</span>, <span class="dt">coef =</span> coeffOfInterest)</a>
+<a class="sourceLine" id="cb58-3" title="3">adjustedPvalues =<span class="kw">p.adjust</span>(res<span class="op">$</span>p, <span class="dt">method =</span> <span class="st">"fdr"</span>)</a></code></pre></div>
+<p>extract the absolute</p>
+<div class="sourceCode" id="cb59"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb59-1" title="1">foldChange =<span class="kw">abs</span>(res<span class="op">$</span>fit<span class="op">$</span>coef[, coeffOfInterest])</a>
+<a class="sourceLine" id="cb59-2" title="2">sigList =<span class="kw">which</span>(adjustedPvalues <span class="op">&lt;=</span><span class="st"> </span><span class="fl">0.05</span>)</a>
+<a class="sourceLine" id="cb59-3" title="3">sigList =<span class="st"> </span>sigList[<span class="kw">order</span>(foldChange[sigList])]</a>
+<a class="sourceLine" id="cb59-4" title="4"></a>
+<a class="sourceLine" id="cb59-5" title="5"><span class="kw">head</span>(taxa[sigList])</a></code></pre></div>
+<pre><code>## [1] "Eubacterium sp. oral clone DO016" "Megasphaera micronuciformis"     
+## [3] "Streptococcus dysgalactiae"       "Actinomyces sp."                 
+## [5] "Prevotella pallens"               "Anaeroglobus geminatus"
+</code></pre>
+<p>feature specific</p>
+<div class="sourceCode" id="cb61"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb61-1" title="1"><span class="kw">head</span>(<span class="kw">MRtable</span>(fit, <span class="dt">coef =</span> <span class="dv">2</span>, <span class="dt">taxa =</span> <span class="dv">1</span><span class="op">:</span><span class="kw">length</span>(<span class="kw">fData</span>(lungTrim)<span class="op">$</span>taxa)))</a></code></pre></div>
+<pre><code>##     +samples in group 0 +samples in group 1 counts in group 0 counts in group 1
+## 63                   24                   6              1538                11
+## 779                  23                   7              1512                22
+## 358                  24                   1               390                 1
+## 499                  21                   2               326                 2
+## 25                   15                  26               162              1893
+## 928                   2                  11                 4                91
+##     smokingStatusSmoker      pvalues   adjPvalues
+## 63            -4.031612 3.927097e-11 2.959194e-08
+## 779           -3.958899 5.751592e-11 2.959194e-08
+## 358           -2.927686 4.339587e-09 8.930871e-07
+## 499           -2.675306 1.788697e-07 1.357269e-05
+## 25             2.575672 1.360718e-07 1.272890e-05
+## 928            2.574172 3.544957e-04 1.414122e-03
+</code></pre>
+<div class="sourceCode" id="cb63"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb63-1" title="1">patients =<span class="kw">sapply</span>(<span class="kw">strsplit</span>(<span class="kw">rownames</span>(<span class="kw">pData</span>(lungTrim)), <span class="dt">split =</span> <span class="st">"_"</span>),<span class="cf">function</span>(i){i[<span class="dv">3</span>]})</a>
+<a class="sourceLine" id="cb63-2" title="2"><span class="kw">pData</span>(lungTrim)<span class="op">$</span>patients =<span class="st"> </span>patientsclassIndex =<span class="kw">list</span>(<span class="dt">smoker =</span><span class="kw">which</span>(<span class="kw">pData</span>(lungTrim)<span class="op">$</span>SmokingStatus <span class="op">==</span><span class="st">"Smoker"</span>))</a>
+<a class="sourceLine" id="cb63-3" title="3">classIndex =<span class="kw">list</span>(<span class="dt">smoker =</span><span class="kw">which</span>(<span class="kw">pData</span>(lungTrim)<span class="op">$</span>SmokingStatus <span class="op">==</span><span class="st">"Smoker"</span>))</a>
+<a class="sourceLine" id="cb63-4" title="4">classIndex<span class="op">$</span>nonsmoker =<span class="kw">which</span>(<span class="kw">pData</span>(lungTrim)<span class="op">$</span>SmokingStatus <span class="op">==</span><span class="st">"NonSmoker"</span>)</a>
+<a class="sourceLine" id="cb63-5" title="5">otu =<span class="st"> </span><span class="dv">779</span></a>
+<a class="sourceLine" id="cb63-6" title="6"><span class="kw">plotOTU</span>(lungTrim, <span class="dt">otu =</span> otu, classIndex, <span class="dt">main =</span> <span class="st">"Neisseria meningitidis"</span>)</a></code></pre></div>
+<p><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAqAAAAHgCAMAAABNUi8GAAABs1BMVEUAAAAAADoAAGYAOjoAOmYAOpAAZmYAZpAAZrYZGRkiIiIpKSk1NTU5OTk6AAA6ADo6AGY6OgA6Ojo6OmY6OpA6ZpA6ZrY6kLY6kNs8PDw9PT1DQ0NERERKSkpMTExNTU1QUFBWVlZZWVldXV1eXl5jY2NkZGRmAABmADpmAGZmOgBmOjpmZgBmZmZmkJBmkLZmtrZmtttmtv9paWltbW1ubm5vb29xcXF3d3d4eHh7e3t8fHyCgoKDg4OFhYWJiYmLi4uNjY2Ojo6Pj4+QOgCQZgCQZjqQkGaQkJCQkLaQtpCQttuQtv+Q27aQ29uQ2/+RkZGTk5OUlJSXl5eYmJibm5udnZ2enp6jo6OoqKiqqqqsrKyurq6vr6+0tLS2ZgC2Zjq2ZpC2kDq2kGa2tra225C229u22/+2/7a2/9u2//+3t7e4uLi5ubm6urq+vr7AwMDBwcHCwsLDw8PFxcXIyMjMzMzOzs7R0dHV1dXZ2dna2trbkDrbkGbbtmbbtpDb27bb29vb/9vb///f39/g4ODl5eXn5+fr6+vz8/P5+fn/tmb/25D/27b//7b//9v///9zIxl0AAAACXBIWXMAAA7DAAAOwwHHb6hkAAAT1klEQVR4nO3djZ8jdWHH8dnl1kZr94pWu0prKbWGUlHY+ljusOBWW2y752Gr9inYnl7dgwPhWhAiqHvAQfaS+ZP7+81TZpLM7sxvnr6Z+bxfL/b2kslkmHxunpLMeD4gzOt6AoDzECikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikESikDTzQiecdmj/mY2+Uvnlx5O2dFh5JuaHLPDi6c/GTk+xwE2/3pNKzbg8Cta+ydqD3H9sl0IEygdpF6GqgWmyOF93SWwRqX+so0MULnrfz6dNksfarB83fP3XTDpj6NRnKn3o7zz3m7f4sHPqdx8zIPnkcjdmO8p0HvZ0n/V/te5eO1x74T+Yv9ubwqVI3hMNdOk6WknYavd2fR2v7F8zYvpdagqYmrJcI1PMOokDNT+vSSVJNwC6sUr8uh4pu3fttMPQsHGQnKjQa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Nw0FOjWhBB8pmea839RdRiS8VZoJdLpz7M/H9l17uUCLbQRQsYpGAg1PPhJct1st0GK7UWzKymgk0Pj0TZO905VAlx81KTG6OhV6dg4G6GhwCWpMRlu5BCVQHQ1tg0ZZzsd5H8qT3gYlUB2N7cWHK/nFkVqghfZ/6FNG346D1oQ+VRAopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopBEopDUU6OLIC+yelBjdtWvXot8++OCD/HE//fTT/g9+8CdXrvhvvvmm77/xxhvh7VfMLf5rr73mv/766+avv3z22X/1X3rpJfPr1atXM2P44SOPfDsa3rr6e7/78C3//z772c9F99++fdv379y5U+T/tB+SeZG4fv16ehatzMGND7MvTHrwhx56yPnpE80EOvUOwl9m8S8FRnftlVdeuRb89sGHH36YW+jTL7744sN3vvDMV2587d69e2++8f777weFXrlx48aV1+7evfsv77333uv+L//55Zf//a9Nwi/5V2/dupWevz/8+vPPf+PbwfD2r1cf/tPH//jz3/+jp576Wljo7bfeeuv2nXfffXcwhSbzInH91Vdfvb6cRStzcOPD7AsTFhoO/pDJtFih60+/1Eigi6Mky+neacHR2T7DQm2fuYXa2fDVZz/+zDPP/NmPv3nv3i/uvB8Wav8nb/zN1+/e/c///Q9T6L+ZPl/+1vW/M4V+/tatzPy1fT7//GcevxHOFtvn449/4qOPPBUVavt868c/enc4hQbzLpOI7fPVP/+reBatzMGND7MvTFhoOPjHrl4tWOj606c0Euh8fBj/Osuu5L3E2oMItDODC5Ql6HYZXKBmGzRahLINuhWGtg1qV/Lhijxn+clevJih7cW3Pjr0FYFCGoFCGoFCGoFCGoFCGoFCGoFCWmeBAoV0FGhTtmQy+6fzGd/5BBSzJZPZP53P+M4noJgtmcz+6XzGdz4BxWzJZPZP5zO+8wkoZksms386n/GdT0AxWzKZ/dP5jO98AorZksnsn85nfOcTUMyWTGb/dD7jO5+AYrZkMvun8xnf+QQA5yFQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSCNQSNuiQOfjnLPmoj2tvwgEijIINB+BChh4oGf7nucdmj+eGHvegf2bPSn+zNx4EM2b4FJN0+iGR7+bf0kxnG8+tvM4M3ujG7ReBKlAz/YP7Zw4PNvfOTYzwPx/T81/5gYzX0bBvAku4zA1957tH5gbcs+Vj4vMx3Yem/+Wsze8QexFkAo0vvqS/R+PfxyGF7+Z7RybeWNnU7SWMcOyzq8gmHkrsze4QexFkAp0Pg5nTvCPOP4R/Gl/mY8/4UWzKb7h8NzR4RzBzDM/UrM3vEHsRZAKNLxY7eGmeRPMuZ3nLh+HW0MWgVaRDTSYveENYi+CVqDWJNoM2vCP98CfmA2e8B+vn7k0I8rKXYIG9+q8CHqBxjMt/pHZSLI3JrOEQCuIe0zN3lSgOi+CVKDBP8vZyj/ezA6kP7F7lXawSTRL4SbpcTl7wxvEXgSpQIMtm+DwRXreZA7B2ZkUHIIz84hAK1guMJPZmxSr9CJoBQqsIFBII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII1BII9A887Hnec6nt54GZzJyfWbOOZUg0BzBidgXR47XB+Ds5HUh0M3CM7aaQkdOD2chWBcC3WwSrdynh/GFVlbOUnh2+bn9cDUeXbYlFA5lb4qWvfYshaPkjuzFXZbj8CfhOILn+p/xYWqsq1eJGRgC3Sg8o3AovNDK6nleTUDhaV3jy7YEw2aGsux5Xu36Pr4jc3GXZBz+ZBQPap7LPjgZ6+pVYrqYG10i0I3Sq+hge3LtTNnBBVr86d7pLLWZmh3KX26LJndkLu6SjGP+6LEfnVk7WkjHY127Skwr//tCCHSjMLBJcBLh+Tg+y3D6WgPhDUE5y0KzQ/nLopI7NlyaILoewczzDpenOc5cDGbtGgcDQqAbJXvhs0ygqau1nNmLsQRxRZdtsbJD2RsuH2fvyAaajMNsqe7+dD8VaOZiMJmrxAwMgW4W7yTNcpegSVzB4OGfZZeg8TiSW7MZxheDYQmKVXFZcaBr24Lh9mPccVROkW3QzCo+GkewxTnzVgPNvUrMgBBojuCKvmYrNN4jj/emF0d7p2b1G15rNdjNji7bEjxq4168PZi63IvPBBqNI1x4egepS23EY109etDZDOkIgeYJ3uq0S7aoiuh4ZHD7E3Zj8kupC1Unh3/SR0sDa8dBM4HG45jaUUzSy8lkrKtXiRkYAnVUxxGfAR41Ko1AHRFoOwjUEYG2g0AhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAhjUAh7f8BLUq5rzY5DiAAAAAASUVORK5CYII="><!-- --></p>
+<div class="sourceCode" id="cb64"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb64-1" title="1">x =<span class="kw">fData</span>(lungTrim)<span class="op">$</span>taxa[otu]</a>
+<a class="sourceLine" id="cb64-2" title="2">otulist =<span class="kw">grep</span>(x,<span class="kw">fData</span>(lungTrim)<span class="op">$</span>taxa)</a>
+<a class="sourceLine" id="cb64-3" title="3"></a>
+<a class="sourceLine" id="cb64-4" title="4"><span class="kw">plotGenus</span>(lungTrim, otulist, classIndex, <span class="dt">labs =</span> <span class="ot">FALSE</span>, <span class="dt">main =</span> <span class="st">"Neisseria meningitidis"</span>)</a>
+<a class="sourceLine" id="cb64-5" title="5">lablist &lt;-<span class="kw">c</span>(<span class="st">"S"</span>, <span class="st">"NS"</span>)</a>
+<a class="sourceLine" id="cb64-6" title="6"><span class="kw">axis</span>(<span class="dv">1</span>, <span class="dt">at =</span><span class="kw">seq</span>(<span class="dv">1</span>, <span class="dv">6</span>, <span class="dt">by =</span> <span class="dv">1</span>), <span class="dt">labels =</span><span class="kw">rep</span>(lablist, <span class="dt">times =</span> <span class="dv">3</span>))</a></code></pre></div>
+<p><img src="data:image/png;base64,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"><!-- --></p>
+
+
+
+</body></html>

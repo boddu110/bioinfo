@@ -1,0 +1,8 @@
+---
+output:
+    md_document:
+        variant: gfm
+---
+
+```{R, code=readLines("Metagenomics.R"), echo=TRUE, eval=TRUE}
+```

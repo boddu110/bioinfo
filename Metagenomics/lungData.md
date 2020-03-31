@@ -381,8 +381,7 @@ lungp = cumNormStat(lungTrim,pFlag=TRUE,main="Trimmed lung data")
 
     ## Default value being used.
 
-![](lungData_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
-
+![](MetagenomicsMethods_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
 ``` r
 lungTrim = cumNorm(lungTrim,p=lungp)
 
@@ -503,8 +502,7 @@ otu = 779
 plotOTU(lungTrim,otu=otu,classIndex,main="Neisseria meningitidis")
 ```
 
-![](lungData_files/figure-gfm/unnamed-chunk-2-2.png)<!-- -->
-
+![](MetagenomicsMethods_files/figure-gfm/unnamed-chunk-23-1.png)<!-- -->
 ``` r
 x = fData(lungTrim)$taxa[otu]
 otulist = grep(x,fData(lungTrim)$taxa)
@@ -517,8 +515,7 @@ lablist<- c("S","NS")
 axis(1, at=seq(1,6,by=1), labels = rep(lablist,times=3))
 ```
 
-![](lungData_files/figure-gfm/unnamed-chunk-2-3.png)<!-- -->
-
+![](MetagenomicsMethods_files/figure-gfm/unnamed-chunk-23-2.png)<!-- -->
 ``` r
 citation("metagenomeSeq")
 ```

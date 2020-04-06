@@ -1,0 +1,168 @@
+---
+author: Chandan Pavuluri
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    dev: 'svg'
+  md_document:
+    variant: gfm
+bibliography: bibliography.ris
+nocite: '@*'
+---
+
+# EMBI-EBI GWAS tutorial uisng PLINK
+
+```{R}
+library(knitr)
+```
+
+```{bash, error=T}
+# Get basic summary statistics about file
+plink --file hapmap1
+# Make a binary PED file
+plink --file hapmap1 --make-bed --out hapmap1
+# High genotyping(at least 95% complete)
+plink --file hapmap1 --make-bed --mind 0.05 --out highgeno
+# Specify input data are in binary format
+plink --bfile hapmap1
+# Generate simple summary statistics on rates of missing data in file
+plink --bfile hapmap1 --missing --out miss_stat
+```
+
+# Ayalyiss for chromosome 1 and 2
+```{bash, error= T}
+plink --bfile hapmap1 --chr 1 --out res1 --missing
+plink --bfile hapmap1 --chr 2 --out res2 --missing
+# Perform summary statistics of allele frequency
+plink --bfile hapmap1 --freq --out freq_stat
+# Perform a stratified analysis
+plink --bfile hapmap1 --freq --within pop.phe --out freq_stat
+```
+# Output more freq_stat.frq.strat observe each row is now the allele frequency for each SNP stratified by subpopulation. SNP is shown twice and CLST column shows whether the frequency is from the Chinese or Japanese populations. 
+
+# To show a specific SNP
+```{bash, error=T}
+plink --bfile hapmap1 --snp rs1891905 --freq --within pop.phe --out snp1_frq_stat
+# Basic association analysis on the disease trait for all single SNPs
+plink --bfile hapmap1 --assoc --out as1
+```
+
+```{bash, error=T}
+sort --key=7 -nr as1.assoc | head
+```
+
+# To get sorted list of association results, that combines a range of significance values that are adjusted for multiple testing. 
+```{bash, error=T}
+plink --bfile hapmap1 --assoc --adjust --out as2
+```
+
+
+# Run the alternate phenotype option
+```{bash, error=T}
+plink --bfile hapmap1 --pheno pop.phe --assoc --adjust --out as3
+# Run SNP of rs2222162 Cochran-Armitage trend test
+plink --bfile hapmap1 --model --snp rs2222162 --out mod1
+# Run for at least 5 observations 
+plink --bfile hapmap1 --model --cell 0 --snp rs2222162 --out mod2
+```
+
+# Perform stratification analysis
+```{bash, error=T}
+plink --bfile hapmap1 --cluster --mc 2 --ppc 0.05 --out str1
+```
+# We observe that all but one pair are in agreement for being Chinese or Japanese. We also see that one individual was not paired with anybody else. We also see cross match of subpopulation Japanese individual JPT260_1 paired with a Chinese individual HCB181_1. Which could imply that these individuals do not differ significantly based on test conducted or perhaps on of these individuals could be of mixed ancestry. 
+
+```{R}
+table1 <- read.table("str1.cluster1", header = TRUE, sep = "\t")
+kable(head(table1))
+```
+# Association analysis, accounting for clusters
+```{bash, error=T}
+plink --bfile hapmap1 --mh --within str1.cluster2 --adjust --out aac1
+```
+```
+# Request each cluster contains at least 1 case and 1 control and threshold of 0.01 
+```{bash, error=T}
+plink --bfile hapmap1 --cluster --cc --ppc 0.01 --out version2
+```
+# We observe that the resulting clusters have largely separated Chinese and Japanese individuals into different clusters. As shown, it results in a five class solutions based on the --ppc constraint. That is to join these five clusters, would more likely involve merging two individuals who are different at the 0.0l level. 
+
+
+# based on this alternative clustering scheme, we repeat association analysis
+```{bash, error=T}
+plink --bfile hapmap1 --mh --within version2.cluster2 --adjust --out aac2
+```
+# We observe that the disease SNP is genome-wide significant
+```{R}
+table2 <- read.table("aac2.cmh.adjusted", header = TRUE, sep = "\t")
+kable(head(table2))
+```
+# To perform stratification analysis with specific number of cluster without test constraint 
+```{bash, error=T}
+plink --bfile hapmap1 --cluster --K 2 --out version3
+```
+# Here we observe the solution has designated all Chinese and all Japanese two separate groups except for two individuals
+
+# Using the above cluster solution in the association analysis
+```{bash, error=T}
+plink --bfile hapmap1 --mh --within version3.cluster2 --adjust --out aac3
+```
+# obtain this result with genome-wide significance. 
+```{R}
+table3 <- read.table("aac3.cmh.adjusted", header = TRUE, sep = "\t")
+kable(head(table3))
+```
+```{bash, error=T}
+plink --bfile hapmap1 --mh --within pop.phe --adjust --out aac3
+plink --bfile hapmap1 --cluster --matrix --out ibd_view
+```
+# Generate a multidimensional scaling plot 
+
+```{R}
+m <- as.matrix(read.table("ibd_view.mibs"))
+mds <- cmdscale(as.dist(1-m))
+k <- c( rep("green",45) , rep("blue",44) )
+plot(mds,pch=20,col=k)
+```
+
+```{bash, error=T}
+# Quantitative trait association analysis
+plink --bfile hapmap1 --assoc --pheno qt.phe --out quant1
+```
+```{R}
+table4 <- read.table("quant1.qassoc", header = TRUE, sep = "\t")
+kable(head(table4))
+```
+# Create quant1.qassoc.adjusted
+```{bash, error=T}
+plink --bfile hapmap1 --assoc --pheno qt.phe --adjust --out quant1
+```
+```{R}
+table5 <- read.table("quant1.qassoc.adjusted", header = TRUE, sep = "\t")
+kable(head(table5))
+```
+# Clustered permutation 
+```{bash, error=T}
+plink --bfile hapmap1 --assoc --pheno qt.phe --perm --within str1.cluster2 --out quant2
+```
+
+```
+# conduct mperm option for multiple testing 
+```{bash, error=T}
+plink --bfile hapmap1 --assoc --pheno qt.phe --mperm 1000 --within str1.cluster2 --out quant3
+# Perform SNP rs2222162 for two population 
+plink --bfile hapmap1 --pheno qt.phe --gxe --covar pop.phe --snp rs2222162 --out quant3
+# We see similar effect in both population (regression coefficients around -2) and the test for interaction of SNP x population interaction is not significant. 
+```
+#Extracting a SNP of interest ( rs2222162 )
+```{bash, error=T}
+plink --bfile hapmap1 --snp rs2222162 --recodeAD --out rec_snp1
+```
+
+# Simple logistic regression 
+```{R}
+d <- read.table("rec_snp1.raw" , header=T)
+#summary(glm(PHENOTYPE-1 ~ rs2222162_A, data=d, family="binomial")
+```

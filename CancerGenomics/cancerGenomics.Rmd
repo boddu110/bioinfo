@@ -1,0 +1,255 @@
+---
+title: "Cancer Genomics"
+output:
+  md_document:
+    variant: markdown_github
+---
+
+```{r}
+library(maftools)
+```
+
+
+```{r}
+clinical.data = read.table("tcga_laml_annot.tsv",sep="\t", header = TRUE) #read in metadata
+laml.maf = read.maf("tcga_laml.maf", clinicalData = clinical.data) #create a MAF object
+#laml.df = subsetMaf(laml.maf, mafObj=FALSE) #creates a data.frame of laml.maf - this can be viewed as a table 
+laml.maf
+```
+
+
+```{r}
+#Shows sample summry.
+getSampleSummary(laml.maf)
+```
+
+```{r}
+#Shows gene summary.
+getGeneSummary(laml.maf)
+```
+
+```{r}
+#shows clinical data associated with samples
+getClinicalData(laml.maf)
+```
+
+```{r}
+#Shows all fields in MAF
+getFields(laml.maf)
+```
+
+```{r}
+#Writes maf summary to an output file with basename laml.
+write.mafSummary(maf = laml.maf, basename = 'laml')
+```
+
+```{r}
+plotmafSummary(maf = laml.maf, rmOutlier = TRUE, addStat = 'median', dashboard = TRUE, titvRaw = FALSE)
+```
+
+```{r}
+#oncoplot for top ten mutated genes.
+oncoplot(maf = laml.maf, top = 10)
+```
+
+```{r}
+oncostrip(maf = laml.maf, genes = c('DNMT3A','NPM1', 'RUNX1'))
+```
+
+```{r}
+laml.titv = titv(maf = laml.maf, plot = FALSE, useSyn = TRUE)
+#plot titv summary
+plotTiTv(res = laml.titv)
+```
+
+```{r}
+#lollipop plot for DNMT3A, which is one of the most frequent mutated gene in Leukemia.
+lollipopPlot(maf = laml.maf, gene = 'DNMT3A', AACol = 'Protein_Change', showMutationRate = TRUE)
+```
+
+```{r}
+lollipopPlot(maf = laml.maf, gene = 'KIT', AACol = 'Protein_Change', labelPos = 816, refSeqID = 'NM_000222')
+```
+
+```{r}
+brca <- system.file("extdata", "brca.maf.gz", package = "maftools")
+brca = read.maf(maf = brca, verbose = FALSE)
+```
+
+```{r}
+rainfallPlot(maf = brca, detectChangePoints = TRUE, pointSize = 0.6)
+```
+
+```{r}
+laml.mutload = tcgaCompare(maf = laml.maf, cohortName = 'Example-LAML')
+```
+
+```{r}
+plotVaf(maf = laml.maf, vafCol = 'i_TumorVAF_WU')
+```
+
+```{r}
+geneCloud(input = laml.maf, minMut = 3)
+```
+
+```{r}
+#exclusive/co-occurance event analysis on top 10 mutated genes. 
+somaticInteractions(maf = laml.maf, top = 25, pvalue = c(0.05, 0.1))
+```
+
+```{r}
+laml.sig = oncodrive(maf = laml.maf, AACol = 'Protein_Change', minMut = 5, pvalMethod = 'zscore')
+head(laml.sig)
+```
+
+```{r}
+plotOncodrive(res = laml.sig, fdrCutOff = 0.1, useFraction = TRUE)
+```
+
+```{r}
+laml.pfam = pfamDomains(maf = laml.maf, AACol = 'Protein_Change', top = 10)
+```
+
+```{r}
+#Protein summary (Printing first 7 columns for display convenience)
+laml.pfam$proteinSummary[,1:7, with = FALSE]
+```
+
+```{r}
+#Domain summary (Printing first 3 columns for display convenience)
+laml.pfam$domainSummary[,1:3, with = FALSE]
+```
+
+
+
+```{r}
+#Survival analysis based on grouping of DNMT3A mutation status
+mafSurvival(maf = laml.maf, genes = 'DNMT3A', time = 'days_to_last_followup', Status = 'Overall_Survival_Status', isTCGA = TRUE)
+```
+
+```{r}
+#Using top 20 mutated genes to identify a set of genes (of size 2) to predict poor prognostic groups
+prog_geneset = survGroup(maf = laml.maf, top = 20, geneSetSize = 2, time = "days_to_last_followup", Status = "Overall_Survival_Status", verbose = FALSE)
+print(prog_geneset)
+```
+
+```{r}
+mafSurvGroup(maf = laml.maf, geneSet = c("DNMT3A", "FLT3"), time = "days_to_last_followup", Status = "Overall_Survival_Status")
+```
+
+```{r}
+#Primary APL MAF
+primary.apl = read.maf("APL_primary.maf")
+
+#Relapse APL MAF
+relapse.apl = read.maf("APL_relapse.maf")
+```
+
+```{r}
+#Considering only genes which are mutated in at-least in 5 samples in one of the cohort to avoid bias due to genes mutated in single sample.
+pt.vs.rt <- mafCompare(m1 = primary.apl, m2 = relapse.apl, m1Name = 'Primary', m2Name = 'Relapse', minMut = 5)
+print(pt.vs.rt)
+```
+
+```{r}
+forestPlot(mafCompareRes = pt.vs.rt, pVal = 0.1, color = c('royalblue', 'maroon'), geneFontSize = 0.8)
+```
+
+```{r}
+genes = c("PML", "RARA", "RUNX1", "ARID1B", "FLT3")
+coOncoplot(m1 = primary.apl, m2 = relapse.apl, m1Name = 'PrimaryAPL', m2Name = 'RelapseAPL', genes = genes, removeNonMutated = TRUE)
+```
+
+```{r}
+lollipopPlot2(m1 = primary.apl, m2 = relapse.apl, gene = "PML", AACol1 = "amino_acid_change", AACol2 = "amino_acid_change", m1_name = "Primary", m2_name = "Relapse")
+```
+
+```{r}
+fab.ce = clinicalEnrichment(maf = laml.maf, clinicalFeature = 'FAB_classification')
+```
+
+```{r}
+#Results are returned as a list. Significant associations p-value < 0.05
+fab.ce$groupwise_comparision[p_value < 0.05]
+```
+
+```{r}
+plotEnrichmentResults(enrich_res = fab.ce, pVal = 0.05)
+```
+
+```{r}
+dgi = drugInteractions(maf = laml.maf, fontSize = 0.75)
+```
+
+```{r}
+dnmt3a.dgi = drugInteractions(genes = "DNMT3A", drugs = TRUE)
+```
+
+```{r}
+#Printing selected columns.
+dnmt3a.dgi[,.(Gene, interaction_types, drug_name, drug_claim_name)]
+```
+
+```{r}
+OncogenicPathways(maf = laml.maf)
+```
+
+```{r}
+PlotOncogenicPathways(maf = laml.maf, pathways = "RTK-RAS")
+```
+
+```{r}
+#BiocManager::install("BSgenome.Hsapiens.UCSC.hg19")
+#Requires BSgenome object
+library(BSgenome.Hsapiens.UCSC.hg19, quietly = TRUE)
+```
+
+```{r}
+laml.tnm = trinucleotideMatrix(maf = laml.maf, prefix = 'chr', add = TRUE, ref_genome = "BSgenome.Hsapiens.UCSC.hg19")
+```
+
+```{r}
+plotApobecDiff(tnm = laml.tnm, maf = laml.maf, pVal = 0.2)
+```
+
+```{r}
+#install.packages("NMF")
+library('NMF')
+laml.sign = estimateSignatures(mat = laml.tnm, nTry = 6,pConstant=1)
+```
+
+```{r}
+plotCophenetic(res = laml.sign)
+```
+
+```{r}
+laml.sig = extractSignatures(mat = laml.tnm, n = 3,pConstant = 1)
+```
+
+```{r}
+laml.og30.cosm = compareSignatures(nmfRes = laml.sig, sig_db = "legacy")
+```
+
+```{r}
+#Compate against updated version3 60 signatures 
+laml.v3.cosm = compareSignatures(nmfRes = laml.sig, sig_db = "SBS")
+```
+
+```{r}
+#install.packages("pheatmap")
+library('pheatmap')
+pheatmap::pheatmap(mat = laml.og30.cosm$cosine_similarities, cluster_rows = FALSE, main = "cosine similarity against validated signatures")
+```
+
+```{r}
+maftools::plotSignatures(nmfRes = laml.sig, title_size = 0.8)
+```
+
+```{r}
+#laml.se = signatureEnrichment(maf = laml.maf, sig_res = laml.sig)
+```
+
+```{r}
+#plotEnrichmentResults(enrich_res = laml.se, pVal = 0.05)
+```
+
